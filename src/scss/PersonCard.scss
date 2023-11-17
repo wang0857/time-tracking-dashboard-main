@@ -1,0 +1,114 @@
+@import './_variables.scss';
+
+.person-card {
+    &-container {
+        background-color: $dark-blue;
+        border-radius: $lg;
+        padding: $xlg 30px;
+        position: relative;
+        height: 520px;
+        width: 264px;
+        display: flex;
+        align-items: end;
+    }
+
+    &-person {
+        display: flex;
+        flex-direction: column;
+        border-radius: $lg;
+        background-color: $blue;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: $xlg 30px;
+        width: 264px;
+        gap: 0px;
+
+        img {
+            width: 80px;
+            aspect-ratio: 1 / 1;
+            border: 5px solid $white;
+            border-radius: 100px;
+            margin-bottom: 40px;
+        }
+
+        &-name {
+            display: flex;
+            flex-direction: column;
+
+            p {
+                &:first-child {
+                    color: $pale-blue;
+                }
+
+                &:last-child {
+                    font-size: 3rem;
+                    margin-bottom: 90px;
+                }
+            }
+        }
+    }
+
+    &-freqence {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        p {
+            color: $pale-blue;
+            transition: $transition;
+
+            &.active {
+                color: $white;
+            }
+
+            &:hover {
+                cursor: pointer;
+                color: $white;
+            }
+        }
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .person-card {
+        &-container {
+            width: 328px;
+            height: 215px;
+            box-sizing: border-box;
+            padding: 30px;
+        }
+
+        &-person {
+            flex-direction: row;
+            align-items: center;
+            width: 328px;
+            gap: 15px;
+            box-sizing: border-box;
+            padding: 30px;
+
+            img {
+                width: 65px;
+                aspect-ratio: 1 / 1;
+                margin-bottom: 0px;
+            }
+    
+            &-name {
+                p {
+                    &:last-child {
+                        font-size: 1.1rem;
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+
+        &-freqence {
+            flex-direction: row;
+            gap: 0px;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+    }
+}

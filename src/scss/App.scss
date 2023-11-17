@@ -1,0 +1,28 @@
+@import './_variables.scss';
+
+.container {
+    display: flex;
+    min-width: 1110px;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    &-timeCards {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 860px;
+        gap: 30px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .container {
+        min-width: unset;
+        flex-direction: column;
+
+        &-timeCards {
+            max-width: unset;
+            flex-direction: column;
+        }
+    }
+}
