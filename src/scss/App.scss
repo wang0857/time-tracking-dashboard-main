@@ -2,7 +2,7 @@
 
 .container {
     display: flex;
-    min-width: 1110px;
+    max-width: 1250px;
     gap: 30px;
     flex-wrap: wrap;
 
@@ -17,7 +17,7 @@
 /* Mobile */
 @media screen and (max-width: 768px) {
     .container {
-        min-width: unset;
+        max-width: unset;
         flex-direction: column;
 
         &-timeCards {
